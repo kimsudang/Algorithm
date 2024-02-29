@@ -1,11 +1,4 @@
-let [N, r, c] = (
-  process.platform === "linux"
-    ? require("fs").readFileSync("/dev/stdin").toString().trim()
-    : `4 7 7`
-)
-  .trim()
-  .split(" ")
-  .map((v) => +v);
+let [N, r, c] = require('fs').readFileSync('/dev/stdin').toString().trim().split(" ").map((v) => +v);
 
 let res = 0;
 const divide = (row, col, size) => {
